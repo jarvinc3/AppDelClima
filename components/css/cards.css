@@ -25,7 +25,7 @@
 }
 
 .only-card {
-  width: 328px;
+  width: 80%;
   height:min-content;
   background: #1E213A;
   display: flex;
@@ -36,7 +36,7 @@
 }
 
 .only-card-low {
-  width: 328px;
+  width: 80%;
   height:min-content;
   background: #1E213A;
   display: flex;

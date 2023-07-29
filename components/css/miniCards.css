@@ -5,7 +5,7 @@
     height: 110%;
     display: flex;
     gap: 30px;
-    padding: 50px 50px;
+    padding: 10% 17%;
     flex-wrap: wrap;
 }
 
@@ -20,6 +20,7 @@
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
+    padding: 0 7.8%;
 }
 
 .container-card {
