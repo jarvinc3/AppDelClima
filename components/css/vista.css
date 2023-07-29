@@ -6,7 +6,7 @@
 }
 
 .superior-section {
-    padding: 0 10px;
+    padding: 0 15px;
     height: 10%;
     display: flex;
     justify-content:space-between;
@@ -18,6 +18,14 @@
     height: 40px;
     background-color: #6E707A;
     box-shadow: 0px 0px 8px 0px #151520;
+    display: flex;
+    justify-content: center;
+}
+
+.search-btn:hover{
+    box-shadow: 0px 0px 8px 0px #9090ff;
+    cursor: pointer;
+    border-radius: 10px;
 }
 
 .search-btn > button {
@@ -32,6 +40,11 @@
     text-align: center;
 }
 
+.open-search:hover {
+    cursor: pointer;
+    color: #1E213A;
+}
+
 .my_location_container{
     display: flex;
     width: 40px;
@@ -40,6 +53,14 @@
     color: #eeeeee;
     border-radius: 30px;
     box-shadow: 0px 0px 8px 0px #151520;
+    display: flex;
+    justify-content: center;
+}
+
+.my_location_container:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 8px 0px #9090ff;
+    color: #1E213A;
 }
 
 span.material-symbols-outlined.my-location {
@@ -70,14 +91,14 @@ span.material-symbols-outlined.my-location {
     justify-content: center;
     align-items: center;
     position: relative;
-    
+    bottom: 270px;
 }
 
 .clima-grafic > img {
     width: 150px;
     height: 174px;
     position: absolute;
-    bottom: 270px;
+    
 
 }
 
@@ -133,7 +154,7 @@ span.material-symbols-outlined.my-location {
 }
 
 .inferior-section {
-    height: 20%;
+    height: 15%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -179,13 +200,10 @@ span.material-symbols-outlined.location-on {
     
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1280px) {
     .container-principal{
-      width: 25%;
-      height: 100%;
-    }
-    .clima-grafic > img {
-        bottom: 270px;
+      width: 30%;
+      height: 140%;
     }
     .mid-superior-section{
         width: 100%;
@@ -194,9 +212,6 @@ span.material-symbols-outlined.location-on {
     }
     .mid-inferior-section{
         height: 35%;
-    }
-    .grados-container{
-        
     }
     .grados-container > h1 {
         font-size: 100px;

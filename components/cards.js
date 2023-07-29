@@ -36,10 +36,12 @@ export default function Cards()  {
   return (
     <main className="principal-container">
       <h1>Today’s Hightlights</h1>
-      <MediumCard dato1= "Wind status"  dato2= "7 " datoAdd= " mph" dato3= " WSW" />
-      <MediumCard dato1= "Humidity"  dato2= "84 " datoAdd= " %" dato3= "barra" /> 
-      <LowCards dato1= "Visibility"  dato2= "6,4 " datoAdd= " milles" /> 
-      <LowCards dato1= "Air Presure"  dato2= "998 " datoAdd= " mb" /> 
+      <div className="cards-container">
+        <MediumCard dato1= "Wind status"  dato2= "7 " datoAdd= " mph" dato3= " WSW" />
+        <MediumCard dato1= "Humidity"  dato2= "84 " datoAdd= " %" dato3= "barra" /> 
+        <LowCards dato1= "Visibility"  dato2= "6,4 " datoAdd= " milles" /> 
+        <LowCards dato1= "Air Presure"  dato2= "998 " datoAdd= " mb" /> 
+      </div>
       </main>
   )
 }

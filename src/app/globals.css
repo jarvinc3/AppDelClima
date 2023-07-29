@@ -5,7 +5,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  width: 100%;
   height: 100%;
   font-family: 'Raleway', sans-serif;
 }
@@ -18,9 +17,11 @@ footer{
 }
 
 .div-footer {
-  height: 50%;
+  height: 100%;
   width: 100%;
   display: flex;
+  justify-content: center;
+  margin: 0 70px 0 0;
 }
 
 .p1 {
@@ -29,7 +30,7 @@ footer{
   align-items: center;
   justify-content: flex-end;
   color: #A09BF1;
-  width: 255px;
+  width: 140px;
 }
 
 .p2 {
@@ -46,18 +47,19 @@ footer{
   font-size: 14px;
   align-items: center;
   color: #A09BF1;
-  width: 150px;
+  width: 64px;
+
 }
 
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 1280px) {
 
   .principal{
     display: flex;
   
   }
   .cards-div{
-    width: 75%;
-    height: 100%;
+    width: 70%;
+    height: 140%;
   }
 }
 
