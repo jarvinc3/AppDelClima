@@ -32,7 +32,7 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  padding: 25px 0;
+  padding: 25px 0 0;
 }
 
 .only-card-low {
@@ -102,6 +102,27 @@
   color: #E7E7EB;
 }
 
+.dato3{
+  display: flex;
+  gap: 10px;
+}
+span.span{
+  margin-block-end: 20px;
+}
+
+.icon {
+  color: #E7E7EB;
+  transform: rotate(175deg);
+  background: #616475;
+  border-radius: 30px;
+  height: 20px;
+  width: 20px;
+  font-size: 15px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
 .dato3 > p {
   font-family: Raleway;
   font-size: 14px;
@@ -110,7 +131,68 @@
   letter-spacing: 0em;
   text-align: left;
   color: #E7E7EB;
+  display: contents;
+
+}
+
+.barra-interactiva{
+  height: 55px;
+}
+
+.barra-porcentual {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 80px;
+  background: #E7E7EB;
+  width: 225px;
+  height: 9px;
+  height: 9px;
+}
+
+.amarillo {
+ border-radius: 80px;
+ background: #FFEC65;
+ width: 70%;
+ height: 9px;
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+.numbers {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 223px ;
+  color: #A09FB1;
+  text-align: center;
+  font-family: Raleway;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-bottom: 5px;
+  height: 15px;
   
+}
+
+.porcentaje-humedad {
+  padding-top: 5px;
+  width:220px ;
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  height: 20px;
+}
+.porcentaje-humedad > :first-child {
+  color: #A09FB1;
+  text-align: center;
+  font-family: Raleway;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 @media screen and (min-width: 1280px) {
@@ -141,6 +223,7 @@
       display: flex;
       width: 310px;
       height: 175px;
+      gap: 0;
     }
     .only-card-low{
       width: 310px;

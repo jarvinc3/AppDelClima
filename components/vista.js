@@ -3,7 +3,7 @@ import "../components/css/vista.css"
 import Image from "next/image";
 
 
-function Vista() {
+function Vista({datos, updateMyLocation}) {
 
     function desaparecer() {
         const desaparece = document.querySelector("#containerNav")
@@ -11,18 +11,12 @@ function Vista() {
         desaparece.classList.remove("active")
         
       }
-    const KEY = "015377a0be139009cc8b4ded78d23a1b";
-    const city = "london";
-    const [datos, setDatos] = useState();
 
-    useEffect(() => {
-        const promesa = fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${KEY}&units=metric`)
-        Promise.all([promesa]).then(async (values) => {
-            const data = await values[0].json();
-            setDatos(data);
-        })
-    }, []); 
-
+    const handleMyLocationClick = () => {
+        updateMyLocation();
+      };
+    
+    
   return (
     <div className='container-principal'>
 
@@ -32,7 +26,7 @@ function Vista() {
                 <button onClick={desaparecer} className="open-search">Search for places</button>
             </div>
             <div className="my_location_container">
-            <span class="material-symbols-outlined my-location">my_location</span>
+            <span  onClick={handleMyLocationClick}  class="material-symbols-outlined my-location">my_location</span>
             </div>
         </section>
 

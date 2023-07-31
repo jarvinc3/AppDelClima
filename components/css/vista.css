@@ -198,7 +198,7 @@ span.material-symbols-outlined.location-on {
 
 .location-on > p {
     color: #6E707A;
-    width: 70px;
+    width: 90px;
     
 }
 
@@ -224,7 +224,7 @@ span.material-symbols-outlined.location-on {
         width: 50px;
     }
     .clima-grafic{
-        height: 60%;
+        height: 55%;
         bottom: 270px;
     }
 }
