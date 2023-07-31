@@ -1,10 +1,19 @@
 import "./css/search.css"
 
+
 export default function Search() {
+
+  function aparecer() {
+    const desaparece = document.querySelector("#containerNav")
+
+    desaparece.classList.add("active")
+    
+  }
+
   return (
-    <nav className='container-nav ' id="active">
+    <nav className="container-nav active" id="containerNav" >
       <div className="close-div">
-        <span class="material-symbols-outlined icon-close">close</span>
+        <span onClick={aparecer} class="material-symbols-outlined icon-close">close</span>
       </div>
       <div className="busqueda">
         <input className="input" type="text" placeholder="search location"/>

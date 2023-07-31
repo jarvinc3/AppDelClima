@@ -4,14 +4,13 @@ import Image from "next/image";
 
 
 function Vista() {
-    const [active, setActive] = useState(false);
 
-    const clasActive = active == true ? "active" : "";
-
-    function handleActive() {
-        setActive(!active);
-    }
-
+    function desaparecer() {
+        const desaparece = document.querySelector("#containerNav")
+  
+        desaparece.classList.remove("active")
+        
+      }
     const KEY = "015377a0be139009cc8b4ded78d23a1b";
     const city = "london";
     const [datos, setDatos] = useState();
@@ -25,12 +24,12 @@ function Vista() {
     }, []); 
 
   return (
-    <div className='container-principal' id={clasActive}>
+    <div className='container-principal'>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
         <section className='superior-section'>
             <div className="search-btn">
-                <button onClick={handleActive} className="open-search">Search for places</button>
+                <button onClick={desaparecer} className="open-search">Search for places</button>
             </div>
             <div className="my_location_container">
             <span class="material-symbols-outlined my-location">my_location</span>
@@ -50,7 +49,7 @@ function Vista() {
                 <p>°C</p>
             </div>
             <div className="snower">
-                <h2>{datos?.weather.id}</h2>
+                <h2>{datos?.weather[0].main}</h2>
             </div>
         </section>
 

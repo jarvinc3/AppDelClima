@@ -25,8 +25,9 @@ export default function Home() {
 
     <main className='principal'>
       <Link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
-      <Vista />
       <Search />
+      <Vista />
+      
       <div className='cards-div'>
       <MiniCards />
       <Cards />

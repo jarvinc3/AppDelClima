@@ -35,8 +35,8 @@ function LowCards(cont) {
 
 export default function Cards()  {
   const KEY = "015377a0be139009cc8b4ded78d23a1b";
-    const city = "london";
-    const [datos, setDatos] = useState();
+  const city = "london";
+  const [datos, setDatos] = useState();
 
     useEffect(() => {
         const promesa = fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${KEY}&units=metric`)
