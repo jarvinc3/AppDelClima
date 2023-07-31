@@ -1,8 +1,12 @@
 .container-principal{
     background-color:#1E213A;
-     width: 100%;
-     height: 150%;
-     /* padding: 15px; */
+    width: 100%;
+    height: 150%;
+    
+}
+
+#active{
+    display: none;
 }
 
 .superior-section {
@@ -86,17 +90,15 @@ span.material-symbols-outlined.my-location {
 
 .clima-grafic{
     width: 100%;
-    height: 100%;
+    height: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    bottom: 270px;
+    bottom: 210px;
 }
 
-.clima-grafic > img {
-    width: 150px;
-    height: 174px;
+.clima-grafic > image {
     position: absolute;
     
 
@@ -116,7 +118,7 @@ span.material-symbols-outlined.my-location {
     align-items: center;
     justify-content: center;
     width: 64%;
-    height: 70%;
+    height: 50%;
 }
 
 .grados-container > h1{
@@ -124,7 +126,7 @@ span.material-symbols-outlined.my-location {
     align-items: center;
     font-weight: 500;
     color: white;
-    font-size: 150px;
+    font-size: 750%;
 }
 
 .grados-container > p {
@@ -215,10 +217,14 @@ span.material-symbols-outlined.location-on {
     }
     .grados-container > h1 {
         font-size: 100px;
-        width: 100px;
+        
         height: 100px;
     }
     .grados-container > p {
         width: 50px;
+    }
+    .clima-grafic{
+        height: 60%;
+        bottom: 270px;
     }
 }

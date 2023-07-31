@@ -1,13 +1,36 @@
+import { useEffect, useState } from "react"
 import "../components/css/vista.css"
+import Image from "next/image";
 
 
 function Vista() {
+    const [active, setActive] = useState(false);
+
+    const clasActive = active == true ? "active" : "";
+
+    function handleActive() {
+        setActive(!active);
+    }
+
+    const KEY = "015377a0be139009cc8b4ded78d23a1b";
+    const city = "london";
+    const [datos, setDatos] = useState();
+
+    useEffect(() => {
+        const promesa = fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${KEY}&units=metric`)
+        Promise.all([promesa]).then(async (values) => {
+            const data = await values[0].json();
+            setDatos(data);
+        })
+    }, []); 
+
   return (
-    <div className='container-principal'>
+    <div className='container-principal' id={clasActive}>
+
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
         <section className='superior-section'>
             <div className="search-btn">
-                <button className="open-search">Search for places</button>
+                <button onClick={handleActive} className="open-search">Search for places</button>
             </div>
             <div className="my_location_container">
             <span class="material-symbols-outlined my-location">my_location</span>
@@ -17,17 +40,17 @@ function Vista() {
         <section className='mid-superior-section'>
             <div className="background"></div>
             <div className="clima-grafic">
-            <img src="./Shower.png" alt="" />
+            <Image src="/Shower.png" alt="" width={150} height={174} />
             </div>
         </section >
 
         <section  className='mid-inferior-section'>
             <div className="grados-container">
-                <h1>15</h1>
+                <h1>{datos?.main.temp}</h1>
                 <p>°C</p>
             </div>
             <div className="snower">
-                <h2>Snower</h2>
+                <h2>{datos?.weather.id}</h2>
             </div>
         </section>
 
@@ -38,7 +61,7 @@ function Vista() {
             </div>
             <div className="location-on">
                 <span class="material-symbols-outlined location-on">location_on</span>
-                <p>Helsinki</p>
+                <p>{datos?.name}</p>
             </div>
         </section>
     </div>
