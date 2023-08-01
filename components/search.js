@@ -29,6 +29,7 @@ export default function Search({setCity}) {
   const handleCityClick = (cityName) => {
     setCity(cityName);
     setSelectedCity(cityName);
+    aparecer()
   };
   
   
@@ -47,7 +48,7 @@ export default function Search({setCity}) {
       </div>
       <div className="listas-container" >
         <ul>
-          <div  onClick={() => handleCityClick('london')} className="liListas"><li><p className="li">London</p> {selectedCity === 'london' && <span class="material-symbols-outlined flecita">arrow_forward_ios</span>} </li></div>
+          <div  onClick={() => handleCityClick('london')}  className="liListas"><li><p className="li">London</p> {selectedCity === 'london' && <span class="material-symbols-outlined flecita">arrow_forward_ios</span>} </li></div>
           <div  onClick={() => handleCityClick('barcelona')} className="liListas"><li><p className="li">Barcelona</p> {selectedCity === 'barcelona' && <span class="material-symbols-outlined flecita">arrow_forward_ios</span>} </li> </div>
           <div  onClick={() => handleCityClick('long beach')} className="liListas"><li><p className="li">Long Beach</p> {selectedCity === 'long beach' && <span class="material-symbols-outlined flecita">arrow_forward_ios</span>} </li></div>
         </ul>

@@ -55,9 +55,10 @@ export default function Cards({ datos }) {
               <p>%</p> </div>
           </div>}
         />
-        <LowCards dato1="Visibility" dato2="6,4 " datoAdd=" milles" />
+        <LowCards dato1="Visibility" dato2={Math.round(datos?.visibility / 1609.34)} datoAdd=" milles" />
         <LowCards dato1="Air Presure" dato2={datos?.main.pressure} datoAdd=" mb" />
       </div>
     </main>
   )
 }
+

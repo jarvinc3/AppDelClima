@@ -90,7 +90,7 @@ span.material-symbols-outlined.my-location {
 
 .clima-grafic{
     width: 100%;
-    height: 70%;
+    height: 65%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -223,7 +223,7 @@ span.material-symbols-outlined.location-on {
         width: 50px;
     }
     .clima-grafic{
-        height: 55%;
+        height: 45%;
         bottom: 270px;
     }
 }

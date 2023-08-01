@@ -3,7 +3,7 @@ import "../components/css/vista.css"
 import Image from "next/image";
 
 
-function Vista({datos, updateMyLocation}) {
+function Vista({datos, updateMyLocation, imagen, unit}) {
 
     function desaparecer() {
         const desaparece = document.querySelector("#containerNav")
@@ -33,14 +33,14 @@ function Vista({datos, updateMyLocation}) {
         <section className='mid-superior-section'>
             <div className="background"></div>
             <div className="clima-grafic">
-            <Image src="/Shower.png" alt="" width={150} height={174} />
+            <Image src={imagen} alt="" width={150} height={174} />
             </div>
         </section >
 
         <section  className='mid-inferior-section'>
             <div className="grados-container">
                 <h1>{datos?.main.temp}</h1>
-                <p>°C</p>
+                <p>{unit === 'metric' ? '°C' : '°F'}</p>
             </div>
             <div className="snower">
                 <h2>{datos?.weather[0].main}</h2>

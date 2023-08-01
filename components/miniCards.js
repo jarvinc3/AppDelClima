@@ -18,12 +18,12 @@ function CardsMini( props) {
 }
 
 
-function MiniCards() {
+function MiniCards( {unit, setUnit} ) {
   return (
     <div className="container-all-cards">
         <div className="grados-btn"> 
-          <button className="grado-celcius">℃</button>
-          <button className="grado-farengeit">℉</button>
+        <button className="grado-celcius" onClick={() => setUnit('metric')}>℃</button>
+        <button className="grado-farengeit" onClick={() => setUnit('imperial')}>℉</button>
         </div>
         <div className="mini-cards-container">
           <CardsMini fecha= "Tomorrow" imagen = "/Sleet.png" imagen2= "/Clear.png" gradoA= "16°C" gradoB= "11°C" />
