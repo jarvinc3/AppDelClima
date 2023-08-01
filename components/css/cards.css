@@ -8,6 +8,12 @@
   gap: 30px;
 }
 
+@media screen and (min-width: 375px) {
+  .principal-container{
+    height: 156% ;
+  }
+}
+
 .principal-container > h1 {
   font-family: Raleway;
   font-size: 24px;
