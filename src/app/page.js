@@ -17,7 +17,7 @@ export default function Home() {
     Promise.all([promesa]).then(async (values) => {
       const data = await values[0].json();
       if (data.cod === '404') {
-        console.error(data.message);
+        alert(data.message);
       } else {
         setDatos(data);
       }
@@ -33,9 +33,6 @@ export default function Home() {
       setCity(data.locality);
     });
   };
-  
-   
-  
 
   return (
 

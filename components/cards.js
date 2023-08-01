@@ -36,18 +36,28 @@ function LowCards(cont) {
   )
 }
 
-export default function Cards({datos})  {
- 
+export default function Cards({ datos }) {
+
+  const porcentaje = datos?.main.humidity
 
   return (
     <main className="principal-container">
       <h1>Today’s Hightlights</h1>
       <div className="cards-container">
-        <MediumCard dato1= "Wind status"  dato2={datos?.wind.speed} datoAdd= " mph" datoI={<span class="material-symbols-outlined icon">near_me</span>} dato3= " WSW" />
-        <MediumCard dato1= "Humidity"  dato2= {datos?.main.humidity} datoAdd= " %" datoBarra= { <div className="barra-interactiva"><div className="numbers"> <p>0</p> <p>50</p> <p>100</p> </div><div className="barra-porcentual"><div className="amarillo"></div></div><div className="porcentaje-humedad"><p>%</p> </div> </div>} /> 
-        <LowCards dato1= "Visibility"  dato2= "6,4 " datoAdd= " milles" /> 
-        <LowCards dato1= "Air Presure"  dato2={datos?.main.pressure} datoAdd= " mb" /> 
+        <MediumCard dato1="Wind status" dato2={datos?.wind.speed} datoAdd=" mph" datoI={<span class="material-symbols-outlined icon">near_me</span>} dato3=" WSW" />
+        <MediumCard dato1="Humidity" dato2={datos?.main.humidity} datoAdd=" %" datoBarra={
+          <div className="barra-interactiva">
+            <div className="numbers">
+              <p>0</p> <p>50</p> <p>100</p>
+            </div><div className="barra-porcentual">
+              <div className="amarillo" style={{ width: `${porcentaje}%` }} ></div></div>
+            <div className="porcentaje-humedad">
+              <p>%</p> </div>
+          </div>}
+        />
+        <LowCards dato1="Visibility" dato2="6,4 " datoAdd=" milles" />
+        <LowCards dato1="Air Presure" dato2={datos?.main.pressure} datoAdd=" mb" />
       </div>
-      </main>
+    </main>
   )
 }

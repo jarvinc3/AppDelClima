@@ -22,6 +22,7 @@ export default function Search({setCity}) {
     setCity(searchValue);
     setSearchValue('');
     setSelectedCity(null);
+    aparecer()
   };
   
 
@@ -39,7 +40,7 @@ export default function Search({setCity}) {
       </div>
       <div className="busqueda">
         <div className="input-container">
-          <span class="material-symbols-outlined buscar">search</span>
+          <span   onClick={aparecer} class="material-symbols-outlined buscar">search</span>
           <input onChange={handleInputChange}  value={searchValue} className="input" type="text" placeholder="search location" />
         </div>
         <button onClick={handleSearchClick}  className="btn-search" >search</button>
